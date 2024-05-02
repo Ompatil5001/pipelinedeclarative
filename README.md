@@ -1,19 +1,18 @@
+
+
 pipeline {
     agent any
-
     stages {
         stage('Checkout') {
             steps {
                 git branch: 'main', url:'https://github.com/Ompatil5001/pipelinescripted.git'
             }
         }
-
         stage('Build') {
             steps {
                 echo 'Building...'
             }
         }
-
         stage('Deploy') {
             steps {
                 echo 'Deploying...'
